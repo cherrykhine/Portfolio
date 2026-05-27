@@ -1,0 +1,1749 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cherry Khine Portfolio </title>
+
+    <!-- SEO -->
+    <meta name="description" content="Cherry Khine is a Junior Developer & Data Analyst crafting clean, performant web experiences. Available for freelance and full-time opportunities." />
+    <meta name="author" content="Cherry Khine" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://CherryKhine.github.io/portfolio/" />
+
+    <!-- Open Graph -->
+   <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://your-username.github.io/portfolio/" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<script>
+  (function () {
+
+    const savedTheme =
+      localStorage.getItem("theme");
+
+    const systemTheme =
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+
+    document.documentElement.setAttribute(
+      "data-theme",
+      savedTheme || systemTheme
+    );
+
+  })();
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".nav-links a");
+
+  window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+
+      const sectionTop = section.offsetTop - 120;
+      const sectionHeight = section.offsetHeight;
+
+      if (pageYOffset >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+
+    });
+
+    navLinks.forEach(link => {
+
+      link.classList.remove("active");
+
+      const href = link.getAttribute("href");
+
+      if (href === `#${current}`) {
+        link.classList.add("active");
+      }
+
+    });
+
+    // Home active at top
+    if (window.scrollY < 300) {
+      navLinks.forEach(link => link.classList.remove("active"));
+
+      const homeLink =
+        document.querySelector('.nav-links a[href="cherry-home.html"]');
+
+      if (homeLink) {
+        homeLink.classList.add("active");
+      }
+    }
+
+  });
+
+});
+</script>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <!-- Icons -->
+
+  <link
+
+    rel="stylesheet"
+
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+
+  />
+  </head>
+
+
+  <body>
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="cherry-home.html" class="nav-brand">CK.</a>
+
+        <div class="nav-links" id="nav-links">
+          <a href="#" class="active">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+       <div class="nav-controls">
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+            <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18.75a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-1.5a.75.75 0 0 1 .75-.75ZM6.166 18.894a.75.75 0 0 1-1.06-1.06l1.59-1.591a.75.75 0 1 1 1.061 1.06l-1.59 1.591ZM2.25 12a.75.75 0 0 1 .75-.75H5.25a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75ZM6.166 6.166a.75.75 0 0 1 1.06-1.06l1.59 1.591a.75.75 0 1 1-1.061 1.06l-1.59-1.591Z"
+              />
+            </svg>
+          </button>
+
+          <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <span class="hero-subtitle">
+  Hello, I'm
+</span>
+
+          <h1 class="hero-title">
+            Cherry Khine
+          </h1>
+
+          <p class="hero-desc">
+          <span class="typing"></span>
+          </p>
+
+          <p class="section-text">
+            Passionate about software development, data analytics, and AI driven technologies.
+            Building clean, user-friendly digital experiences.
+
+          </p>
+
+
+     <div class="hero-actions">
+
+  <!-- Resume Dropdown -->
+  <div class="resume-dropdown">
+
+    <button type="button" class="btn-primary resume-toggle">
+      Download Resume
+
+      <svg xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round">
+
+        <polyline points="6 9 12 15 18 9"></polyline>
+
+      </svg>
+    </button>
+
+    <!-- Dropdown Menu -->
+    <div class="resume-menu">
+
+      <a href="assets/resume/Cherry-Khine-Developer-CV.pdf" download>
+        Developer CV
+      </a>
+
+      <a href="assets/resume/Cherry-Khine-Data-Analyst-CV.pdf" download>
+        Data Analyst CV
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- Contact Button -->
+  <a href="#contact" class="btn-secondary">
+
+    Let's Talk
+
+              <svg xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+
+              </svg>
+            </a>
+          </div>
+          
+        </div>
+        <div class="hero-image-wrapper">
+  <img src="assets/images/profile.jpg" alt="Cherry Khine Profile" class="hero-image" />
+</div>
+      </section>
+
+    </main>
+
+
+    <!-- About Section -->
+
+    <section class="about-preview" id="about">
+
+  <h2 class="section-heading">Who am I</h2>
+
+  <h1 class="page-title">About Me</h1>
+
+  <div class="about-text-col">
+    
+    <div class="about-card">
+      <p class="section-text">
+        I am a motivated IT professional with experience in software development,
+        data analytics, and AI gained through academic projects,
+        internships, and technology simulations.
+      </p>
+
+      <p class="section-text">
+        I enjoy solving problems, exploring new technologies,
+        and continuously improving my technical and analytical skills.
+      </p>
+    </div>
+
+    <div class="about-actions">
+      <a href="#experience" class="btn-primary">
+        View My Experience
+      </a>
+    </div>
+
+  </div>
+
+</section>
+ 
+
+<!-- Skills Section -->
+
+        <section class="skills-section" id="skills">
+
+        <h2 class="section-heading"> Skills & Technologies</h2>
+        <h1 class="page-title" style="margin-bottom: 1.0rem"> What I work with</h1>
+        <h1 class="page-title1">Tools and technologies I use regularly</h1>
+
+        <div class="skills-grid">
+
+    <!-- Card -->
+    <div class="skill-card">
+      <div class="skill-icon violet">
+        <i class="fa-solid fa-robot"></i>
+      </div>
+
+      <h3>AI-Tools</h3>
+      <div class="skill-tags">
+        <span>ChatGPT</span>
+        <span>Gemini</span>
+        <span>Canva</span>
+        <span>GitHub Copilot</span>
+        <span>Runway</span>
+      </div>
+    </div>
+
+    <!-- Card -->
+    <div class="skill-card">
+      <div class="skill-icon purple">
+        <i class="fa-solid fa-code"></i>
+      </div>
+
+      <h3>Programming Languages</h3>
+
+      <div class="skill-tags">
+        <span>Java</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>MySQL</span>
+        <span>PHP</span>
+        <span>C#</span>
+        <span>C++</span>
+        <span>Python </span> 
+        <span>Machine Learning</span>         
+      </div>
+    </div>
+
+    <!-- Card -->
+    <div class="skill-card">
+      <div class="skill-icon blue">
+      <i class="fa-solid fa-laptop-code"></i>
+      </div>
+
+      <h3>Software Development Tools</h3>
+
+      <div class="skill-tags">
+        <span>Looker Studio</span>
+        <span>VS code</span>
+        <span>Visual Studio</span>
+        <span>NetBeans IDE</span>
+         <span>Google Colab </span>
+        <span>XAMPP/WAMP</span>
+        <span>Microsoft Excel</span>
+        <span>Power BI</span>
+        <span>Microsoft Azure </span>
+        
+      </div>
+    </div>
+
+    <!-- Card -->
+    <div class="skill-card">
+
+      <div class="skill-icon green">
+        <i class="fa-solid fa-diagram-project"></i>
+      </div>
+
+      <h3>Software Architecture</h3>
+
+      <div class="skill-tags">
+        <span>OOP</span>
+        <span>UML Diagrams</span>
+        <span>MVC</span>
+        <span>Unit Testing</span>
+        <span>Basic Clean Architecture</span>
+        <span>SOLID</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+ <!-- =========================
+     EXPERIENCE SECTION
+========================= -->
+<section class="career-section" id="experience">
+
+  <h2 class="section-heading">
+    CAREER PATH
+  </h2>
+
+  <h1 class="page-title">
+    WORK EXPERIENCE
+  </h1>
+
+   <h1 class="page-title1"> My professional journey so far</h1>
+
+  <!-- EXPERIENCE WRAPPER -->
+  <div class="experience-section">
+
+    <!-- TIMELINE LINE -->
+    <div class="timeline-line"></div>
+
+    <!-- =========================
+         EXPERIENCE 1
+    ========================= -->
+    <div class="experience-card">
+
+      <span class="timeline-dot"></span>
+
+      <div class="experience-top">
+
+        <div>
+          <h2 class="company-name">
+            Venom Hub Software Development
+          </h2>
+
+          <p class="job-role">
+            Junior Software Developer · Remote
+          </p>
+        </div>
+
+        <span class="experience-date">
+          Aug 2025 – Present
+        </span>
+
+      </div>
+
+      <p class="experience-description">
+        Implemented in a hybrid role combining software development and data analytics, 
+        contributing to data-driven application development, feature testing, and business 
+        intelligence reporting in an Agile environment. Focused on improving system performance, data accuracy, and decision-making through backend development and data analysis workflows.
+      </p>
+
+      <div class="experience-block">
+
+        <h3>Work Highlights</h3>
+
+        <div class="tags">
+
+          <span class="tag-pill">
+            Data-Driven Feature Development
+          </span>
+
+          <span class="tag-pill">
+            Data Validation & Cleaning
+          </span>
+
+          <span class="tag-pill">
+            Analytics Dashboard
+          </span>
+
+          <span class="tag-pill">
+            Feature Testing
+          </span>
+
+          <span class="tag-pill">
+            Agile Workflow
+          </span>
+
+        </div>
+
+      </div>
+
+      <div class="experience-block">
+
+        <h3>Development Stack</h3>
+
+        <div class="tags">
+
+          <span class="tag-pill">Java</span>
+          <span class="tag-pill">Python</span>
+          <span class="tag-pill">MySQL</span>
+          <span class="tag-pill">Looker Studio</span>
+          <span class="tag-pill">SQL</span>
+          <span class="tag-pill">Pandas</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- =========================
+         EXPERIENCE 2
+    ========================= -->
+    <div class="experience-card">
+
+      <span class="timeline-dot"></span>
+
+      <div class="experience-top">
+
+        <div>
+          <h2 class="company-name">
+            Lloyds Banking Group (Forage)
+          </h2>
+
+          <p class="job-role">
+            Data Science & Analytics
+          </p>
+        </div>
+
+        <span class="experience-date">
+          May 2025 – June 2025
+        </span>
+
+      </div>
+
+      <p class="experience-description">
+        Completed a virtual experience program focused on
+        customer churn analysis, machine learning,
+        and business intelligence reporting.
+      </p>
+
+      <div class="experience-block">
+
+        <h3>Project Highlights</h3>
+
+        <div class="tags">
+
+          <span class="tag-pill">
+            Data Cleaning
+          </span>
+
+          <span class="tag-pill">
+            Feature Engineering
+          </span>
+
+          <span class="tag-pill">
+            Machine Learning
+          </span>
+
+          <span class="tag-pill">
+            Data Visualization
+          </span>
+
+        </div>
+
+      </div>
+
+      <div class="experience-block">
+
+        <h3>Tech Stack</h3>
+
+        <div class="tags">
+
+          <span class="tag-pill">Python</span>
+          <span class="tag-pill">Random Forest</span>
+          <span class="tag-pill">GridSearchCV</span>
+          <span class="tag-pill">Pandas</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- =========================
+         EXPERIENCE 3
+    ========================= -->
+    <div class="experience-card">
+
+      <span class="timeline-dot"></span>
+
+      <div class="experience-top">
+
+        <div>
+          <h2 class="company-name">
+            Lloyds Banking Group (Forage)
+          </h2>
+
+          <p class="job-role">
+            Technology Engineering
+          </p>
+        </div>
+
+        <span class="experience-date">
+          May 2025 – June 2025
+        </span>
+
+      </div>
+
+      <p class="experience-description">
+        Completed a virtual technology engineering
+        experience focused on frontend development,
+        debugging, and cloud deployment workflows.
+      </p>
+
+      <div class="experience-block">
+
+        <h3>Project Highlights</h3>
+
+        <div class="tags">
+
+          <span class="tag-pill">
+            Frontend Development
+          </span>
+
+          <span class="tag-pill">
+            Application Testing
+          </span>
+
+          <span class="tag-pill">
+            UX Enhancement
+          </span>
+
+          <span class="tag-pill">
+            Version Control
+          </span>
+
+        </div>
+
+      </div>
+
+      <div class="experience-block">
+
+        <h3>Tech Stack</h3>
+
+        <div class="tags">
+
+          <span class="tag-pill">HTML</span>
+          <span class="tag-pill">CSS</span>
+          <span class="tag-pill">JavaScript</span>
+          <span class="tag-pill">Microsoft Azure</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<h2 class="section-heading"> ACADEMIC BACKGROUND</h2>
+<h1 class="page-title">EDUCATION</h1>
+<h1 class="page-title1">Qualifications and Certifications</h1>
+
+
+
+<div class="education-grid">
+
+  <!-- Education Card 1 -->
+  <div class="edu-card green">
+    <span class="edu-year">2024 – 2025</span>
+
+    <div class="edu-content">
+      <h3>BSc (Hons) Information Technology</h3>
+      <p>University of Huddersfield - Huddersfield</p>
+    </div>
+  </div>
+
+  <!-- Education Card 2 -->
+  <div class="edu-card pink">
+    <span class="edu-year">2022 – 2023</span>
+
+    <div class="edu-content">
+      <h3>HND Infocomm Technology</h3>
+      <p>British University College – Myanmar</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- Certifications -->
+<div class="cert-card">
+
+  <h3 class="cert-title">CERTIFICATIONS</h3>
+
+  <ul class="cert-list">
+    <li>
+      CS50 Computer Science for Business – Harvard University
+    </li>
+
+    <li>
+      Career Essentials in Generative AI – Microsoft & LinkedIn
+    </li>
+
+    <li>
+      Generative AI for Educators with Gemini - Google
+    </li>
+
+    <li>
+      AWS Solutions Architecture – Amazon Web Services
+    </li>
+
+    <li>
+       Project Management Job Simulation - CBRE
+    </li>
+  </ul>
+
+</div>
+
+
+
+<!--Project Section-->
+
+
+ 
+             <section class="projects-section" id="projects">
+                <h2 class="section-heading mt-2">MY WORKS</h2>
+                <h1 class="page-title">Featured Projects</h1>
+
+
+
+    <!-- Filter Buttons -->
+
+    <div class="project-filters">
+
+      <button class="active" data-filter="all">All</button>
+
+       <button data-filter="DD"> Data Science</button>
+
+      <button data-filter="web">Web Application</button>
+
+      <button data-filter="mobile">Mobile Development</button>
+
+      <button data-filter="Java">Java Application</button>
+
+      <button data-filter="C"> C Programming</button>
+
+    </div>
+
+
+
+    <!-- Project Cards -->
+
+    <div class="projects-container">
+
+
+
+      <!-- Card 1 -->
+
+      <div class="project-card" data-category="web">
+
+       <div class="project-image">
+
+  <img src="assets/images/projectC.jpg" alt="Project Image">
+
+  <span class="badge">My Project</span>
+
+  <div class="image-overlay">
+    <a href="project-details.html?id=sinetcom" class="view-btn">
+      View Project
+    </a>
+  </div>
+
+</div>
+
+
+        <div class="project-content">
+
+          <small>Web Application</small>
+
+
+
+          <div class="title-row">
+
+            <h3>My Portfolio</h3>
+
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+
+          </div>
+
+
+
+          <p>
+
+           Build a modern personal portfolio website and performance styling..
+
+          </p>
+
+
+
+          <div class="tags">
+
+            <span>CSS</span>
+            <span>HTML</span>
+            <span>Javascript</span>
+            <span>Tailwind CSS</span>
+            <span>VS code</span>
+
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <!-- Card 2 -->
+
+      <div class="project-card" data-category="web">
+
+        <div class="project-image">
+
+  <img src="assets/images/project5.jpg" alt="Project Image">
+    <span class="badge">Virtual Experience</span>
+
+  <div class="image-overlay">
+    <a href="mortgage-detail.html" class="view-btn">
+      View Project
+    </a>
+  </div>
+
+</div>
+
+
+
+        <div class="project-content">
+
+          <small> Web Application </small>
+
+
+
+          <div class="title-row">
+
+            <h3>Mortgage Calculator Job Simulation</h3>
+
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+
+          </div>
+
+
+
+          <p>
+
+            Built and deployed a functional mortgage calculator using 
+            JavaScript and Azure as part of a banking-focused engineering 
+            simulation.
+
+          </p>
+
+
+
+          <div class="tags">
+
+            <span>CSS</span>
+            <span>HTML</span>
+            <span>Javascript</span>
+            <span>Azure</span>
+            <span>Git</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+     
+         <!-- Card 3 -->
+
+      <div class="project-card" data-category="DD">
+
+        <div class="project-image">
+
+  <img src="assets/images/project4.png" alt="Project Image">
+    <span class="badge">Virtual Experience</span>
+
+  <div class="image-overlay">
+    <a href="data1.html" class="view-btn">
+      View Project
+    </a>
+  </div>
+
+</div>
+
+
+
+        <div class="project-content">
+
+          <small> Data Science</small>
+
+
+
+          <div class="title-row">
+
+            <h3>British Airaway Customer Analytics</h3>
+
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+
+          </div>
+
+
+
+          <p>
+
+            Built predictive models and analysed customer booking behaviour that uing techniques 
+            during the British Airways Data Science Job Simulation.
+
+          </p>
+
+
+
+          <div class="tags">
+
+            <span>Python</span>
+            <span>Pandas</span>
+            <span>Machine Learning</span>
+            <span>Jupyter</span>
+            <span>Power BI</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+       <!-- Card 4 -->
+
+      <div class="project-card" data-category="DD">
+
+        <div class="project-image">
+
+  <img src="assets/images/project4.1.png" alt="Project Image">
+    <span class="badge">Academic Project</span>
+
+  <div class="image-overlay">
+    <a href="data2.html" class="view-btn">
+      View Project
+    </a>
+  </div>
+
+</div>
+
+
+
+        <div class="project-content">
+
+          <small> Data Analytics</small>
+
+
+
+          <div class="title-row">
+
+            <h3>Big Data Analytics Application</h3>
+
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+
+          </div>
+
+
+
+          <p>
+
+            Built a big data analytics application with dashboard visualisation,
+            forecasting models, and time series analysis to support business
+            decision-making and operational insights.
+
+          </p>
+
+
+
+          <div class="tags">
+
+            <span>Python</span>
+            <span>R</span>
+            <span>Microsoft Excel</span>
+            <span>Google Colab</span>
+            <span>Looker Studio</span>
+            <span>Data Analytics</span>
+            <span>Forecasting</span>
+            <span>Time Series</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Card 5-->
+
+      <div class="project-card" data-category="Java">
+
+        <div class="project-image">
+
+  <img src="assets/images/project6.jpg" alt="Project Image">
+    <span class="badge">Full Stack Desktop Application</span>
+
+  <div class="image-overlay">
+    <a href="clinic.html" class="view-btn">
+      View Project
+    </a>
+  </div>
+
+</div>
+
+
+        <div class="project-content">
+
+          <small>Java Application</small>
+
+
+
+          <div class="title-row">
+
+            <h3> Clinic Management System (CMS)</h3>
+
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+
+          </div>
+
+
+
+          <p>
+
+           Developed a full-featured Clinic Management System as a final year project 
+           using Java (NetBeans IDE) and MySQL with role-based access control and 
+           secure database integration.
+
+          </p>
+
+
+
+          <div class="tags">
+
+            <span> Java (Swing and AWT)</span>
+            <span>JDBC</span>
+            <span>Java Libraries & APIS</span>
+            <span>NetBeans IDE</span>
+             <span> Java SE</span>
+            <span>MySQL Server</span>
+            <span>SQL</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+      <!-- Card 6 -->
+
+      <div class="project-card" data-category="web">
+
+        <div class="project-image">
+
+  <img src="assets/images/project2.jpg" alt="Project Image">
+    <span class="badge">Testing Project</span>
+
+  <div class="image-overlay">
+    <a href="tracker-details.html" class="view-btn">
+      View Project
+    </a>
+  </div>
+
+</div>
+
+
+
+        <div class="project-content">
+
+          <small> Web Application </small>
+
+
+
+          <div class="title-row">
+
+            <h3>Galaxy Universe</h3>
+
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+
+          </div>
+
+
+
+          <p>
+
+            Creating this infinite space or galaxy zoom effect 
+            using just looping all Universe system built using CSS, HTML, and Javascript.
+
+          </p>
+
+
+
+          <div class="tags">
+            <span>CSS</span>
+            <span>HTML</span>
+            <span>Javascript</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Card 7 -->
+
+      <div class="project-card" data-category="web">
+
+        <div class="project-image">
+
+  <img src="assets/images/project3.JPG" alt="Project Image">
+    <span class="badge">Academic Project</span>
+
+  <div class="image-overlay">
+    <a href="goodfood-detail.html" class="view-btn">
+      View Project
+    </a>
+  </div>
+
+</div>
+
+
+
+        <div class="project-content">
+
+          <small> Web Application </small>
+
+
+
+          <div class="title-row">
+
+            <h3>Good Food Restaurant System</h3>
+
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+
+          </div>
+
+
+
+          <p>
+
+            Developed a full-stack restaurant ordering system with online food ordering, 
+            admin authentication, order management, and MySQL database integration using 
+            PHP, JavaScript, HTML, and CSS.
+
+          </p>
+
+
+
+          <div class="tags">
+
+            <span>CSS3</span>
+            <span>HTML5</span>
+            <span>Javascript</span>
+            <span>PHP</span>
+            <span>MySQL</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+     <!-- Card 8-->
+
+      <div class="project-card" data-category="Java">
+
+        <div class="project-image">
+
+  <img src="assets/images/project7.jpg" alt="Project Image">
+    <span class="badge">Academic Project</span>
+
+  <div class="image-overlay">
+    <a href="library.html" class="view-btn">
+      View Project
+    </a>
+  </div>
+
+</div>
+
+
+        <div class="project-content">
+
+          <small>Java Application</small>
+
+
+
+          <div class="title-row">
+
+            <h3> Library Management System</h3>
+
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+
+          </div>
+
+
+
+          <p>
+
+           Implemented a full-featured Library Management System as a academic project 
+           using Java (NetBeans IDE) and MySQL with desktop-based
+
+          </p>
+
+
+
+          <div class="tags">
+
+            <span> Java (Swing and AWT)</span>
+            <span>JDBC</span>
+            <span>Java Libraries & APIS</span>
+            <span>NetBeans IDE</span>
+             <span> Java SE</span>
+            <span>MySQL Server</span>
+            <span>SQL</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Card 9-->
+
+      <div class="project-card" data-category="mobile">
+
+        <div class="project-image">
+
+  <img src="assets/images/project8.jpg" alt="Project Image">
+    <span class="badge">CRUD System</span>
+
+  <div class="image-overlay">
+    <a href="mobile.html" class="view-btn">
+      View Project
+    </a>
+  </div>
+
+</div>
+
+
+        <div class="project-content">
+
+          <small>Mobile Development</small>
+
+
+
+          <div class="title-row">
+
+            <h3> RentalU Mobile Application</h3>
+
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+
+          </div>
+
+
+
+          <p>
+            Android-based rental property management application developed using 
+            Android Studio and SQLite. The system enables users to manage rental 
+            listings through full CRUD operations, form validation, and 
+            responsive mobile user interfaces.
+
+          </p>
+
+
+
+          <div class="tags">
+
+            <span> Android Studio</span>
+            <span>Java</span>
+            <span>Kotlin</span>
+            <span>SQLite</span>
+             <span> XML</span>
+            <span>Android SDK</span>
+            <span>SQL</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+       <!-- Card 10-->
+
+      <div class="project-card" data-category="C">
+
+        <div class="project-image">
+
+  <img src="assets/images/project9.jpg" alt="Project Image">
+    <span class="badge">Academic Project</span>
+
+  <div class="image-overlay">
+    <a href="cp.html" class="view-btn">
+      View Project
+    </a>
+  </div>
+
+</div>
+
+
+        <div class="project-content">
+
+          <small>C++ Application</small>
+
+
+
+          <div class="title-row">
+
+            <h3> Member Management System in C++</h3>
+
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+
+          </div>
+
+
+
+          <p>
+            Developed a C++ Member Management System implementing file handling, 
+            inheritance, and polymorphism concepts.
+
+          </p>
+
+
+
+          <div class="tags">
+
+            <span> Visual Studio</span>
+            <span>C++</span>
+            <span>OOP</span>
+            <span>File Handling</span>
+            <span>Inheritance</span>
+            <span> Polymorphism</span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+    </div>
+
+  </section>
+  </div>
+
+
+<!-- CONTACT SECTION -->
+  <section class="contact-section" id="contact">
+
+  <h2 class="section-heading">Get in Touch</h2>
+  <h1 class="page-title">Let's Connect</h1>
+
+  <div class="contact-intro">
+          I'm always open to discussing new opportunities, collaborating on exciting projects, 
+            and contributing to innovative ideas. Whether you have a role in mind, a project to 
+            build, or simply want to connect, feel free to reach out — I'd love to hear from you.
+        </div>
+
+      
+
+      
+
+        <div class="contact-modern-grid">
+
+      <!-- LEFT CONTACT INFO -->
+      <div class="contact-modern-info">
+
+        <!-- EMAIL -->
+       <div class="modern-info-card copy-card" data-copy="cherrykhine1719@gmail.com">
+        <div class="modern-info-left">
+
+    <div class="modern-icon blue">
+      <!-- Email SVG -->
+      <svg width="22" height="22"  fill="none">
+        <path d="M4 6h16v12H4V6z" stroke="currentColor" stroke-width="2"/>
+        <path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="2"/>
+      </svg>
+    </div>
+
+    <div class="modern-info-text">
+      <span>EMAIL</span>
+      <h3>cherrykhine1719@gmail.com</h3>
+    </div>
+
+  </div>
+
+  <button class="copy-btn" aria-label="Copy email">
+    <!-- Copy SVG -->
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+      <rect x="2" y="2" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+    </svg>
+  </button>
+</div>
+
+        <!-- PHONE -->
+      <div class="modern-info-card copy-card" data-copy="+447774417781">
+  <div class="modern-info-left">
+
+    <div class="modern-icon green">
+      <!-- Phone SVG -->
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <path d="M22 16.9v3a2 2 0 0 1-2.2 2
+        19.8 19.8 0 0 1-8.6-3.1
+        19.5 19.5 0 0 1-6-6
+        A2 2 0 0 1 6.1 10h3
+        a2 2 0 0 1 2 1.7c.1.8.4 1.6.9 2.3
+        .5.7 1.2 1.3 2 1.7
+        a2 2 0 0 1 1.7 2z"
+        stroke="currentColor" stroke-width="2"/>
+      </svg>
+    </div>
+
+    <div class="modern-info-text">
+      <span>PHONE</span>
+      <h3>+447774417781</h3>
+    </div>
+
+  </div>
+
+  <button class="copy-btn" aria-label="Copy phone">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+      <rect x="2" y="2" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+    </svg>
+  </button>
+</div>
+        <!-- LINKEDIN -->
+<div class="modern-info-card copy-card"
+     data-copy="https://www.linkedin.com/in/cherry-khine/">
+
+  <div class="modern-info-left">
+
+    <div class="modern-icon linkedin">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5
+        1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 24h5V7H0v17z
+        M7.5 7h4.8v2.3h.1c.7-1.3 2.3-2.7 4.8-2.7
+        5.1 0 6 3.3 6 7.6V24h-5v-8.4c0-2-.04-4.6-2.8-4.6
+        s-3.2 2.2-3.2 4.4V24h-5V7z"/>
+      </svg>
+    </div>
+
+    <div class="modern-info-text">
+      <span>LINKEDIN</span>
+      <h3>linkedin.com/in/cherry-khine/</h3>
+    </div>
+
+  </div>
+
+  <button class="copy-btn" aria-label="Copy LinkedIn">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+      <rect x="2" y="2" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+    </svg>
+  </button>
+</div>
+
+
+
+        <!-- LOCATION -->
+
+      <div class="modern-info-card">
+  <div class="modern-info-left">
+
+    <div class="modern-icon pink">
+      <!-- Location SVG -->
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11z"
+        stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="10" r="2.5"
+        stroke="currentColor" stroke-width="2"/>
+      </svg>
+    </div>
+
+    <div class="modern-info-text">
+      <span>LOCATION</span>
+      <h3>Sunderland, United Kingdom</h3>
+    </div>
+
+  </div>
+
+ 
+</div>
+      
+</div>
+
+     
+     <!-- RIGHT CONTACT FORM -->
+<div class="modern-contact-form">
+
+  <!-- FORM HEADER -->
+  <div class="modern-form-header">
+
+    <div class="form-icon">
+      <svg xmlns="http://www.w3.org/2000/svg"
+           width="24"
+           height="24"
+           viewBox="0 0 24 24"
+           fill="none"
+           stroke="currentColor"
+           stroke-width="2"
+           stroke-linecap="round"
+           stroke-linejoin="round">
+
+        <path d="M22 2L11 13"></path>
+        <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
+
+      </svg>
+    </div>
+
+    <div>
+      <h2>Open to new opportunities</h2>
+    </div>
+
+  </div>
+
+  <!-- CONTACT FORM --->
+  <form action="https://formspree.io/f/xredkvjw" method="POST" id="contactForm">
+  
+
+    <!-- NAME -->
+    <div class="modern-form-group">
+      <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        required
+      />
+    </div>
+
+    <!-- EMAIL -->
+    <div class="modern-form-group">
+      <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        required
+      />
+    </div>
+
+    <!-- MESSAGE -->
+    <div class="modern-form-group">
+      <textarea
+        name="message"
+        placeholder="Your Message"
+        rows="7"
+        required
+      ></textarea>
+    </div>
+
+    <!-- SUBMIT BUTTON -->
+    <button type="submit" class="modern-submit-btn">
+
+      Send Message
+
+      <svg xmlns="http://www.w3.org/2000/svg"
+           width="18"
+           height="18"
+           viewBox="0 0 24 24"
+           fill="none"
+           stroke="currentColor"
+           stroke-width="2"
+           stroke-linecap="round"
+           stroke-linejoin="round">
+
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+
+      </svg>
+
+    </button>
+
+    <!-- STATUS -->
+    <div id="formStatus" class="modern-status"></div>
+
+  </form>
+
+</div>
+
+  </div>
+
+</section>
+
+
+    <footer>
+      <div class="footer-left">&copy; <span id="year">2026</span> Cherry Khine. All rights reserved.</div>
+      <div class="socials">
+        <a href="https://wa.me/447774417781" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M20.52 3.48A11.86 11.86 0 0 0 12.04 0C5.53 0 .24 5.29.24 11.8c0 2.08.54 4.1 1.57 5.88L0 24l6.44-1.68a11.74 11.74 0 0 0 5.6 1.42h.01c6.51 0 11.8-5.29 11.8-11.8 0-3.16-1.23-6.12-3.33-8.46zM12.05 21.5h-.01a9.7 9.7 0 0 1-4.94-1.35l-.35-.21-3.82 1 1.02-3.72-.23-.38a9.73 9.73 0 0 1-1.49-5.12c0-5.37 4.37-9.74 9.75-9.74 2.6 0 5.04 1.01 6.87 2.85a9.66 9.66 0 0 1 2.87 6.89c0 5.38-4.37 9.74-9.75 9.74zm5.67-7.33c-.31-.16-1.84-.91-2.12-1.01-.28-.1-.48-.16-.68.16-.2.31-.78 1.01-.96 1.21-.18.2-.35.22-.66.06-.31-.16-1.3-.48-2.48-1.53-.92-.82-1.54-1.84-1.72-2.15-.18-.31-.02-.48.14-.64.14-.14.31-.35.47-.53.16-.18.21-.31.31-.51.1-.2.05-.39-.02-.55-.06-.16-.68-1.64-.94-2.27-.25-.6-.51-.52-.68-.53h-.58c-.2 0-.53.07-.81.39-.28.31-1.06 1.04-1.06 2.53s1.09 2.95 1.24 3.15c.16.2 2.14 3.28 5.2 4.6.73.32 1.3.51 1.74.65.73.23 1.4.2 1.93.12.59-.09 1.84-.75 2.1-1.48.26-.73.26-1.36.18-1.48-.08-.12-.28-.2-.59-.36z"/>
+  </svg>
+</a>
+
+        <a href="https://www.linkedin.com/in/cherry-khine/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
+        </a>
+        <a href="https://github.com/cherrykhine" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+        </svg>
+        </a>
+        <a href="https://instagram.com/cherry_cherrykhine" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"
+            />
+          </svg>
+        </a>
+      </div>
+    </footer>
+
+<!-- Main JS -->
+<script src="assets/js/scripts.js"></script>
+ 
+<!-- ✅ FIXED: Typed JS init -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new Typed(".typing", {
+          strings: [
+            "Data Analyst",
+            "Junior Software Developer",
+            "Web Developer",
+            "Frontend Developer",
+            "Project Management"
+          ],
+          typeSpeed: 100,
+          backSpeed: 60,
+          loop: true
+        });
+      });
+    </script>
+   
+   <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const toggleBtn =
+    document.querySelector(".resume-toggle");
+
+  const menu =
+    document.querySelector(".resume-menu");
+
+  const resumeLinks =
+    document.querySelectorAll(".resume-menu a");
+
+  // Open / Close Menu
+  toggleBtn.addEventListener("click", function (e) {
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    menu.classList.toggle("active");
+
+  });
+
+  // Prevent closing when clicking inside menu
+  menu.addEventListener("click", function (e) {
+
+    e.stopPropagation();
+
+  });
+
+  // Close menu when clicking CV link
+  resumeLinks.forEach(link => {
+
+    link.addEventListener("click", function () {
+
+      menu.classList.remove("active");
+
+    });
+
+  });
+
+  // Close when clicking outside
+  document.addEventListener("click", function () {
+
+    menu.classList.remove("active");
+
+  });
+
+});
+
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const copyButtons = document.querySelectorAll(".copy-btn");
+
+  copyButtons.forEach(button => {
+
+    button.addEventListener("click", async () => {
+
+      // Find parent card
+      const card = button.closest(".copy-card");
+
+      // Get text from data-copy
+      const textToCopy = card.dataset.copy;
+
+      try {
+
+        // Copy text
+        await navigator.clipboard.writeText(textToCopy);
+
+        // Success state
+        button.classList.remove("error");
+        button.classList.add("success");
+
+        // Change icon
+        button.innerHTML = `
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M20 6L9 17L4 12"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"/>
+          </svg>
+        `;
+
+      } catch (err) {
+
+        // Error state
+        button.classList.add("error");
+
+      }
+
+      // Reset after 2 sec
+      setTimeout(() => {
+
+        button.classList.remove("success", "error");
+
+        button.innerHTML = `
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <rect x="9" y="9" width="13" height="13"
+              rx="2"
+              stroke="currentColor"
+              stroke-width="2"/>
+
+            <rect x="2" y="2" width="13" height="13"
+              rx="2"
+              stroke="currentColor"
+              stroke-width="2"/>
+          </svg>
+        `;
+
+      }, 2000);
+
+    });
+
+  });
+
+});
+</script>
+
+<script>
+const cards = document.querySelectorAll(".experience-card");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+cards.forEach(card => observer.observe(card));
+</script>
+
+<button id="scrollTop" class="scroll-top" aria-label="Scroll to top">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+       viewBox="0 0 24 24" fill="none" stroke="currentColor"
+       stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+
+  </body>
+</html>
