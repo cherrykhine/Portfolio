@@ -3,45 +3,105 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Cherry Khine Portfolio</title>
+    <title>Cherry Khine Portfolio </title>
 
     <!-- SEO -->
-    <meta name="description" content="Browse Alex Rivera's portfolio of development and design projects, including web applications, UI redesigns, and open-source contributions." />
-    <meta name="author" content="Alex Rivera" />
+    <meta name="description" content="Cherry Khine is a Junior Developer & Data Analyst crafting clean, performant web experiences. Available for freelance and full-time opportunities." />
+    <meta name="author" content="Cherry Khine" />
     <meta name="robots" content="index, follow" />
-   <link rel="canonical" href="https://yourname.github.io/cherry-portfolio/" />
+    <link rel="canonical" href="https://CherryKhine.github.io/portfolio/" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Projects | Alex Rivera" />
-    <meta property="og:description" content="Browse Alex Rivera's portfolio of development and design projects, including web applications, UI redesigns, and open-source contributions." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://your-username.github.io/portfolio/projects.html" />
+   <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://your-username.github.io/portfolio/" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
- <script>
-    (function () {
+<script>
+  (function () {
 
-      const savedTheme =
-        localStorage.getItem("theme");
+    const savedTheme =
+      localStorage.getItem("theme");
 
-      const systemTheme =
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-          ? "dark"
-          : "light";
+    const systemTheme =
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
 
-      document.documentElement.setAttribute(
-        "data-theme",
-        savedTheme || systemTheme
-      );
+    document.documentElement.setAttribute(
+      "data-theme",
+      savedTheme || systemTheme
+    );
 
-    })();
-  </script>
+  })();
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".nav-links a");
+
+  window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+
+      const sectionTop = section.offsetTop - 120;
+      const sectionHeight = section.offsetHeight;
+
+      if (pageYOffset >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+
+    });
+
+    navLinks.forEach(link => {
+
+      link.classList.remove("active");
+
+      const href = link.getAttribute("href");
+
+      if (href === `#${current}`) {
+        link.classList.add("active");
+      }
+
+    });
+
+    // Home active at top
+    if (window.scrollY < 300) {
+      navLinks.forEach(link => link.classList.remove("active"));
+
+      const homeLink =
+        document.querySelector('.nav-links a[href="cherry-home.html"]');
+
+      if (homeLink) {
+        homeLink.classList.add("active");
+      }
+    }
+
+  });
+
+});
+</script>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <!-- Icons -->
 
+  <link
+
+    rel="stylesheet"
+
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+
+  />
   </head>
 
 <body>
