@@ -398,6 +398,7 @@ main {
   -webkit-text-fill-color: transparent;
 }
 
+
 .hero-desc {
   font-size: 1.20rem;
   color: var(--text-muted);
@@ -405,7 +406,10 @@ main {
   margin-bottom: 2.0rem;
   line-height: 1.7;
   text-align: justify;
-  
+}
+@media (max-width: 768px) {
+  .hero-title { font-size: 2rem; }
+  .hero-desc  { font-size: 1rem; text-align: left; } 
 }
 
 .hero-actions {
