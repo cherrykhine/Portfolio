@@ -746,14 +746,12 @@ footer {
 
 .section-text {
   font-size: 1.3rem;
-  text-align: center;
+  text-align: justify;
   color: var(--text-main);
   opacity: 0.82;
   margin-bottom: 1.5rem;
   line-height: 1.7;
-  text-align: justify;
 }
-
 
 .text-link {
   color: var(--accent);
