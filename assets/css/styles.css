@@ -409,7 +409,7 @@ main {
 }
 @media (max-width: 768px) {
   .hero-title { font-size: 2rem; }
-  .hero-desc  { font-size: 1rem; text-align: left; } 
+  .hero-desc  { font-size: 1rem; text-align: justify; } 
 }
 
 .hero-actions {
